@@ -1,121 +1,115 @@
 /* Custom styles for Bootstrap */
 .round-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .content-block {
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .content-block:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .links-block a {
-    color: #0d6efd;
-    transition: color 0.2s ease;
+    color: #0d6efd;
+    transition: color 0.2s ease;
 }
 
 .links-block a:hover {
-    color: #0a58ca;
+    color: #0a58ca;
 }
 
-/* Фоновая картинка для header */
+/* Фоновая картинка для header - ИСПРАВЛЕНО */
 header {
-    background-image: url('header-bg.jpg'); /* Ваша картинка */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    color: white;
+    background-image: url('green.jpg'); /*  картинка */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-/* Затемнение фона для лучшей читаемости */
+/* Легкое затемнение фона */
 header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Уменьшил прозрачность с 0.6 до 0.3 */
+    z-index: 1;
 }
 
 /* Поднимаем контент над фоном */
 header > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Белый текст в шапке */
-header .site-title,
-header .nav-link {
-    color: white !important;
-}
-
-header .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-header .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    position: relative;
+    z-index: 2;
 }
 
 /* Стили для навигационных ссылок */
 header .nav-link {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 header .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Белый текст в заголовке */
+header .site-title {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Гамбургер меню белый */
+header .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+header .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Mobile First - дополнительные стили для мобильных устройств */
 @media (max-width: 767.98px) {
-    .navbar-nav .nav-link {
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
-   
-    .content-block {
-        margin-bottom: 1rem;
-    }
-   
-    /* Адаптивный фон для мобильных */
-    header {
-        background-position: center 30%;
-    }
+    .navbar-nav .nav-link {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    
+    .content-block {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Стили для улучшения внешнего вида таблицы */
 .table-hover tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(0, 0, 0, 0.075);
 }
 
 /* Кастомные стили для формы */
 .form-check-input:checked {
-    background-color: #198754;
-    border-color: #198754;
+    background-color: #198754;
+    border-color: #198754;
 }
 
 .btn-success {
-    background-color: #198754;
-    border-color: #198754;
+    background-color: #198754;
+    border-color: #198754;
 }
 
 .btn-success:hover {
-    background-color: #157347;
-    border-color: #146c43;
-}
-
-/* Улучшаем читаемость контента на фоне */
-header .container {
-    backdrop-filter: blur(2px);
+    background-color: #157347;
+    border-color: #146c43;
 }
