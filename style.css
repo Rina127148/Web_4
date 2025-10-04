@@ -25,11 +25,12 @@
 
 /* Фоновая картинка для header */
 header {
-    background-image: url('green.jpg'); /*  картинка */
+    background-image: url('header-bg.jpg'); /* Ваша картинка */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    color: white;
 }
 
 /* Затемнение фона для лучшей читаемости */
@@ -40,7 +41,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -50,35 +51,30 @@ header > * {
     z-index: 2;
 }
 
-/* Стили для навигационных ссылок - ИСПРАВЛЕНО */
+/* Белый текст в шапке */
+header .site-title,
 header .nav-link {
     color: white !important;
-    background-color: rgba(0, 0, 0, 0.3) !important; /* Темный фон вместо белого */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    font-weight: 500;
 }
 
-header .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    color: white !important;
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-/* Белый текст в заголовке */
-header .site-title {
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-/* Гамбургер меню белый */
 header .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 header .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Стили для навигационных ссылок */
+header .nav-link {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+header .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px);
 }
 
 /* Mobile First - дополнительные стили для мобильных устройств */
@@ -117,4 +113,9 @@ header .navbar-toggler-icon {
 .btn-success:hover {
     background-color: #157347;
     border-color: #146c43;
+}
+
+/* Улучшаем читаемость контента на фоне */
+header .container {
+    backdrop-filter: blur(2px);
 }
