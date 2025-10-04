@@ -23,7 +23,7 @@
     color: #0a58ca;
 }
 
-/* Фоновая картинка для header - ИСПРАВЛЕНО */
+/* Фоновая картинка для header */
 header {
     background-image: url('green.jpg'); /*  картинка */
     background-size: cover;
@@ -32,7 +32,7 @@ header {
     position: relative;
 }
 
-/* Легкое затемнение фона */
+/* Затемнение фона для лучшей читаемости */
 header::before {
     content: '';
     position: absolute;
@@ -40,7 +40,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Уменьшил прозрачность с 0.6 до 0.3 */
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -50,17 +50,17 @@ header > * {
     z-index: 2;
 }
 
-/* Стили для навигационных ссылок */
+/* Стили для навигационных ссылок - ИСПРАВЛЕНО */
 header .nav-link {
     color: white !important;
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(0, 0, 0, 0.3) !important; /* Темный фон вместо белого */
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
     font-weight: 500;
 }
 
 header .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     color: white !important;
     transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.6);
@@ -69,7 +69,7 @@ header .nav-link:hover {
 /* Белый текст в заголовке */
 header .site-title {
     color: white !important;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Гамбургер меню белый */
@@ -90,6 +90,11 @@ header .navbar-toggler-icon {
     
     .content-block {
         margin-bottom: 1rem;
+    }
+    
+    /* Адаптивный фон для мобильных */
+    header {
+        background-position: center 30%;
     }
 }
 
