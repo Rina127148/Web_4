@@ -1,0 +1,57 @@
+/* Custom styles for Bootstrap */
+.round-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content-block {
+    transition: transform 0.2s ease;
+}
+
+.content-block:hover {
+    transform: translateY(-2px);
+}
+
+.links-block a {
+    color: #0d6efd;
+    transition: color 0.2s ease;
+}
+
+.links-block a:hover {
+    color: #0a58ca;
+}
+
+/* Mobile First - дополнительные стили для мобильных устройств */
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-link {
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+   
+    .content-block {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Стили для улучшения внешнего вида таблицы */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Кастомные стили для формы */
+.form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
