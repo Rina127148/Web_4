@@ -120,4 +120,13 @@ header .container {
     backdrop-filter: blur(2px);
 }
 
+/* Дополнительные стили для таблицы с объединенными ячейками */
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table thead th {
+    border-bottom: 2px solid #dee2e6;
+}
 
